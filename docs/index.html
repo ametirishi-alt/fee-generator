@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Calculate client fees for financial statements and tax returns using the uplifted September 2026 price list.">
+  <meta name="theme-color" content="#142f42">
+  <title>Fee Generator</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23142f42'/%3E%3Crect x='7' y='6' width='18' height='7' rx='2' fill='%2395e8c1'/%3E%3Cpath d='M9 18h4m-2-2v4m7-2h5M9 25h4m5-2 5 4m0-4-5 4' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="2" width="16" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M8 7h8M8 12h2m4 0h2M8 17h2m4 0h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Fee Generator</span></div>
+    <div class="top-actions"><span class="rate-date">Rates · 28 Sep 2026</span><button id="rates-button" class="quiet-button" type="button">Price list</button><button id="reset-button" class="outline-button" type="button">New quote</button></div>
+  </header>
+  <main class="workspace">
+    <div class="page-heading"><div><p class="eyebrow">CLIENT FEES</p><h1>Build a fee estimate</h1><p class="intro">Select the work in the client’s file.</p></div><span class="currency-label">AUD</span></div>
+    <div class="layout">
+      <section class="quote-builder" aria-label="Quote selections">
+        <div class="client-strip">
+          <label>Client / group name <span class="optional">optional</span><input id="client-name" type="text" maxlength="150" placeholder="e.g. Smith Family Group" autocomplete="off"></label>
+          <label>Financial year<select id="financial-year"><option value="2025">FY2025</option><option value="2026" selected>FY2026</option><option value="2027">FY2027</option><option value="2028">FY2028</option><option value="2029">FY2029</option><option value="2030">FY2030</option></select></label>
+        </div>
+        <div class="mode-picker" role="group" aria-label="Type of client work"><button type="button" data-mode="business" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5h10v16M14 10h6v11M8 9h2m-2 4h2m-2 4h2M2 21h20"/></svg>Business financials &amp; tax</button><button type="button" data-mode="individual" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>Individual tax returns</button></div>
+        <section class="panel base-panel">
+          <div class="section-heading"><span class="step-number">1</span><h2 id="base-heading">Business entities</h2><button id="add-entity" class="text-button" type="button">+ Add entity</button></div>
+          <div id="business-base">
+            <div id="entity-list"></div>
+            <details id="group-details" class="group-details"><summary>Medium / large group pricing</summary><div class="group-settings"><label>Pricing basis<select id="group-mode"><option value="per-entity">Per entity · standard pricing</option><option value="medium">Medium group · 5–10 entities, under $10m</option><option value="large">Large group · more than 10 entities, over $10m</option></select></label><p id="group-description" class="help">Standard pricing applies the turnover adjustment to each applicable entity.</p><label id="payroll-confirm-label" class="confirm-control" hidden><input id="payroll-confirm" type="checkbox"><span>Use the workbook’s $4,000 base for each payroll entity. This group rate is still written as $4,000 in the uplifted price list.</span></label></div></details>
+          </div>
+          <div id="individual-base" hidden><div class="individual-rate"><div><h3>Tax return preparation</h3><p>$420 per person</p></div><div class="quantity-control"><button type="button" data-return-step="-1" aria-label="One fewer tax return">−</button><input id="return-count" type="number" min="1" max="10000" step="1" value="1" aria-label="Number of tax returns"><button type="button" data-return-step="1" aria-label="One more tax return">+</button></div></div><p class="help">Use 2 for a couple. Schedule quantities are the totals across all returns.</p></div>
+        </section>
+        <section class="panel services-panel"><div class="section-heading"><span class="step-number">2</span><h2>Select what applies</h2><span id="selection-count" class="selected-count">0 selected</span></div><div id="service-list"></div></section>
+        <section class="panel gst-panel"><div class="section-heading"><span class="step-number">3</span><h2>GST treatment</h2></div><div class="gst-options" role="group" aria-label="GST treatment"><button type="button" data-gst="exclusive" aria-pressed="false">Add 10% GST</button><button type="button" data-gst="inclusive" aria-pressed="false">GST already included</button><button type="button" data-gst="none" aria-pressed="false">No GST added</button></div><p class="help">The workbook does not state whether its prices include GST. Choose the treatment for this quote.</p></section>
+        <p class="source-note">Price List dated 28 September 2026. Uplift is already included.</p>
+      </section>
+      <aside class="estimate-panel" aria-label="Live fee estimate">
+        <div class="estimate-heading"><h2>Your estimate</h2><span id="quote-status" class="status-badge">Choose services</span></div>
+        <p id="estimate-caption" class="estimate-caption">Calculated from your selections</p><div id="estimate-amount" class="estimate-amount" aria-live="polite">$0</div><p id="estimate-tax-label" class="estimate-tax-label">Choose a business type to begin</p>
+        <div id="quote-details" class="quote-details"></div><div id="totals" class="totals"></div>
+        <div id="issues" class="issues" hidden></div>
+        <div class="quote-actions"><button id="copy-quote" type="button" class="primary-button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"/></svg>Copy quote</button><button id="print-quote" type="button" class="print-button" disabled>Print / save PDF</button></div><p class="estimate-footer">Updates as you select. Use New quote for the next client.</p>
+      </aside>
+    </div>
+  </main>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <dialog id="rates-dialog"><div class="dialog-header"><h2>Price list</h2><button id="close-rates" type="button" class="close-button" aria-label="Close price list">×</button></div><p class="dialog-intro">Uplifted rates from the Price List sheet, dated 28 September 2026. No further uplift is applied.</p><div class="source-exceptions"><h3>Source notes</h3><p>The Quote Calculation sheet contains older sample rates. This calculator uses the Price List instead.</p><p>The depreciation row lists a $240 minimum and $180 maximum. Select the amount to use when adding that schedule.</p><p>The workbook’s group payroll base is written as $4,000. Confirm that amount when using group pricing. Exactly $10 million group turnover and exactly 5 employees have no distinct rule in the workbook; choose a confirmed pricing basis.</p><p>Ranged services remain a range until you select the lower or upper fee. Fees are rounded to cents per line.</p></div><div id="rate-table"></div><div class="dialog-footer"><button id="done-rates" type="button" class="primary-button">Done</button></div></dialog>
+  <dialog id="copy-dialog"><div class="dialog-header"><h2>Copy your quote</h2><button id="close-copy" class="close-button" type="button" aria-label="Close quote text">×</button></div><p class="dialog-intro">Select the text below and copy it.</p><textarea id="quote-text" rows="18" readonly aria-label="Quote text"></textarea><div class="dialog-footer"><button id="done-copy" class="primary-button" type="button">Done</button></div></dialog>
+  <section id="print-area" aria-hidden="true"></section>
+  <noscript><p class="noscript">Enable JavaScript to calculate fees.</p></noscript>
+</body>
+</html>
