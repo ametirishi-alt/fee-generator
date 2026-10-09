@@ -1,0 +1,707 @@
+{
+  "A1": {
+    "value": "Quote Estimate & Add-On Prices - [Firm Name]",
+    "formula": null,
+    "style": "53"
+  },
+  "A3": {
+    "value": "Client Group Turnover",
+    "formula": null,
+    "style": "21"
+  },
+  "C3": {
+    "value": 0.0,
+    "formula": null,
+    "style": "15"
+  },
+  "B5": {
+    "value": "Entity",
+    "formula": null,
+    "style": "41"
+  },
+  "C5": {
+    "value": "Turnover Range",
+    "formula": null,
+    "style": "17"
+  },
+  "D5": {
+    "value": "Base Price",
+    "formula": null,
+    "style": "16"
+  },
+  "E5": {
+    "value": "Number of Entities",
+    "formula": null,
+    "style": "17"
+  },
+  "F5": {
+    "value": "Turnover Adjustment",
+    "formula": null,
+    "style": "17"
+  },
+  "G5": {
+    "value": "Price Range",
+    "formula": null,
+    "style": "51"
+  },
+  "I5": {
+    "value": "Quote Estimate",
+    "formula": null,
+    "style": "24"
+  },
+  "A6": {
+    "value": "1. Business: Year End Compliance - Base Rate",
+    "formula": null,
+    "style": "25"
+  },
+  "B7": {
+    "value": "Micro Business (investment entity)",
+    "formula": null,
+    "style": "43"
+  },
+  "C7": {
+    "value": "< $100,000",
+    "formula": null,
+    "style": "8"
+  },
+  "D7": {
+    "value": 1800.0,
+    "formula": null,
+    "style": "9"
+  },
+  "I7": {
+    "value": 0.0,
+    "formula": "E7*D7",
+    "style": "26"
+  },
+  "B8": {
+    "value": "Micro Business (investment entity)",
+    "formula": null,
+    "style": "43"
+  },
+  "C8": {
+    "value": "< $ 2 Million",
+    "formula": null,
+    "style": "8"
+  },
+  "D8": {
+    "value": 1800.0,
+    "formula": null,
+    "style": "9"
+  },
+  "F8": {
+    "value": "plus 0.15% of Turnover",
+    "formula": null,
+    "style": "11"
+  },
+  "G8": {
+    "value": 1800.0,
+    "formula": null,
+    "style": "13"
+  },
+  "H8": {
+    "value": 5400.0,
+    "formula": null,
+    "style": "13"
+  },
+  "I8": {
+    "value": 0.0,
+    "formula": "E8*D8",
+    "style": "26"
+  },
+  "B9": {
+    "value": "Micro Business (Single Entity/Contractor)",
+    "formula": null,
+    "style": "43"
+  },
+  "C9": {
+    "value": "< $ 2 Million",
+    "formula": null,
+    "style": "8"
+  },
+  "D9": {
+    "value": 3000.0,
+    "formula": null,
+    "style": "9"
+  },
+  "F9": {
+    "value": "plus 0.15% of Turnover",
+    "formula": null,
+    "style": "11"
+  },
+  "G9": {
+    "value": 3000.0,
+    "formula": null,
+    "style": "13"
+  },
+  "H9": {
+    "value": 6600.0,
+    "formula": null,
+    "style": "13"
+  },
+  "I9": {
+    "value": 0.0,
+    "formula": null,
+    "style": "26"
+  },
+  "B10": {
+    "value": "Small Business Entity  - Less than 5 employees",
+    "formula": null,
+    "style": "43"
+  },
+  "C10": {
+    "value": "< $ 5 Million",
+    "formula": null,
+    "style": "8"
+  },
+  "D10": {
+    "value": 3600.0,
+    "formula": null,
+    "style": "8"
+  },
+  "F10": {
+    "value": "plus 0.15% of Turnover",
+    "formula": null,
+    "style": "11"
+  },
+  "G10": {
+    "value": 3600.0,
+    "formula": null,
+    "style": "13"
+  },
+  "H10": {
+    "value": 12600.0,
+    "formula": null,
+    "style": "13"
+  },
+  "I10": {
+    "value": 0.0,
+    "formula": null,
+    "style": "26"
+  },
+  "B11": {
+    "value": "Small Business Entity - More than 5 employees",
+    "formula": null,
+    "style": "43"
+  },
+  "C11": {
+    "value": "< $ 5 Million",
+    "formula": null,
+    "style": "8"
+  },
+  "D11": {
+    "value": 4800.0,
+    "formula": null,
+    "style": "8"
+  },
+  "F11": {
+    "value": "plus 0.15% of Turnover",
+    "formula": null,
+    "style": "11"
+  },
+  "G11": {
+    "value": 4800.0,
+    "formula": null,
+    "style": "13"
+  },
+  "H11": {
+    "value": 13800.0,
+    "formula": null,
+    "style": "13"
+  },
+  "I11": {
+    "value": 0.0,
+    "formula": null,
+    "style": "26"
+  },
+  "B13": {
+    "value": "Medium Business Group (5 - 10 Entities) ",
+    "formula": null,
+    "style": "44"
+  },
+  "C13": {
+    "value": "< $ 10 Million",
+    "formula": null,
+    "style": "8"
+  },
+  "D13": {
+    "value": "$4,000 (Per Payroll Entity)+ $\"as above\"  (non-Payroll Entity)",
+    "formula": null,
+    "style": "11"
+  },
+  "F13": {
+    "value": 0.0015,
+    "formula": null,
+    "style": "14"
+  },
+  "G13": {
+    "value": 14400.0,
+    "formula": null,
+    "style": "45"
+  },
+  "H13": {
+    "value": 44400.0,
+    "formula": null,
+    "style": "45"
+  },
+  "I13": {
+    "value": 0.0,
+    "formula": "IF(C3<10000000,C3*F13,0)",
+    "style": "46"
+  },
+  "B14": {
+    "value": "Large Business Group (More than 10 Entities)",
+    "formula": null,
+    "style": "44"
+  },
+  "C14": {
+    "value": "> $ 10 Million",
+    "formula": null,
+    "style": "8"
+  },
+  "D14": {
+    "value": "$4,000 (Per Payroll Entity)+ $\"as above\" (non-Payroll Entity)",
+    "formula": null,
+    "style": "11"
+  },
+  "F14": {
+    "value": 0.001,
+    "formula": null,
+    "style": "14"
+  },
+  "G14": {
+    "value": 34800.0,
+    "formula": null,
+    "style": "45"
+  },
+  "H14": {
+    "value": 0.0,
+    "formula": null,
+    "style": "45"
+  },
+  "I14": {
+    "value": 0.0,
+    "formula": "IF(C3>10000000,C3*F14,0)",
+    "style": "46"
+  },
+  "B15": {
+    "value": "BASE QUOTE TOTAL",
+    "formula": null,
+    "style": "56"
+  },
+  "I15": {
+    "value": 0.0,
+    "formula": "SUM(I7:I14)",
+    "style": "27"
+  },
+  "A16": {
+    "value": "2. Year End Compliance: ADD-ONS",
+    "formula": null,
+    "style": "28"
+  },
+  "D16": {
+    "value": "Minimum",
+    "formula": null,
+    "style": "12"
+  },
+  "F16": {
+    "value": "Maximum",
+    "formula": null,
+    "style": "12"
+  },
+  "B17": {
+    "value": "Additional Time - Delay due to Client Information",
+    "formula": null,
+    "style": "43"
+  },
+  "F17": {
+    "value": 360.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G17": {
+    "value": "Per Month",
+    "formula": null,
+    "style": "49"
+  },
+  "B18": {
+    "value": "Div 7a",
+    "formula": null,
+    "style": "43"
+  },
+  "F18": {
+    "value": 1140.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G18": {
+    "value": "Calculations/Documents",
+    "formula": null,
+    "style": "49"
+  },
+  "B19": {
+    "value": "Dividends Declared",
+    "formula": null,
+    "style": "43"
+  },
+  "F19": {
+    "value": 360.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G19": {
+    "value": "Per Company",
+    "formula": null,
+    "style": "49"
+  },
+  "B20": {
+    "value": "BAS Amendment",
+    "formula": null,
+    "style": "43"
+  },
+  "F20": {
+    "value": 540.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G20": {
+    "value": "Per BAS",
+    "formula": null,
+    "style": "49"
+  },
+  "B21": {
+    "value": "Services Agreement/Hire Agreement",
+    "formula": null,
+    "style": "43"
+  },
+  "D21": {
+    "value": 1800.0,
+    "formula": null,
+    "style": "9"
+  },
+  "F21": {
+    "value": 3000.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G21": {
+    "value": "Calculations/Documents",
+    "formula": null,
+    "style": "49"
+  },
+  "B22": {
+    "value": "PAYG Payment Summary reporting & Amendments",
+    "formula": null,
+    "style": "43"
+  },
+  "F22": {
+    "value": 120.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G22": {
+    "value": "Per employee",
+    "formula": null,
+    "style": "49"
+  },
+  "B23": {
+    "value": "Bank Account not Reconciled",
+    "formula": null,
+    "style": "43"
+  },
+  "F23": {
+    "value": 720.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G23": {
+    "value": "Per Account",
+    "formula": null,
+    "style": "49"
+  },
+  "B24": {
+    "value": "Payroll not Reconciled",
+    "formula": null,
+    "style": "43"
+  },
+  "D24": {
+    "value": 360.0,
+    "formula": null,
+    "style": "9"
+  },
+  "F24": {
+    "value": 1800.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G24": {
+    "value": "Processing/reconciliation work",
+    "formula": null,
+    "style": "49"
+  },
+  "B25": {
+    "value": "CGT - per Property",
+    "formula": null,
+    "style": "43"
+  },
+  "F25": {
+    "value": 1620.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G25": {
+    "value": "Per Property",
+    "formula": null,
+    "style": "49"
+  },
+  "B26": {
+    "value": "CGT - per Share/Unit Holding",
+    "formula": null,
+    "style": "43"
+  },
+  "F26": {
+    "value": 180.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G26": {
+    "value": "Per holding",
+    "formula": null,
+    "style": "49"
+  },
+  "B27": {
+    "value": "Foreign Currency Translation",
+    "formula": null,
+    "style": "43"
+  },
+  "F27": {
+    "value": 1140.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G27": {
+    "value": "Calculations",
+    "formula": null,
+    "style": "49"
+  },
+  "A29": {
+    "value": "3. Other Services:",
+    "formula": null,
+    "style": "29"
+  },
+  "B30": {
+    "value": "BAS Preparation",
+    "formula": null,
+    "style": "43"
+  },
+  "D30": {
+    "value": 660.0,
+    "formula": null,
+    "style": "9"
+  },
+  "F30": {
+    "value": 900.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G30": {
+    "value": "Per BAS",
+    "formula": null,
+    "style": "49"
+  },
+  "B31": {
+    "value": "Tax Planning",
+    "formula": null,
+    "style": "43"
+  },
+  "F31": {
+    "value": 360.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G31": {
+    "value": "Per Entity",
+    "formula": null,
+    "style": "49"
+  },
+  "B32": {
+    "value": "Monthly/Quarterly Review Meeting",
+    "formula": null,
+    "style": "43"
+  },
+  "D32": {
+    "value": 360.0,
+    "formula": null,
+    "style": "9"
+  },
+  "F32": {
+    "value": 1440.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G32": {
+    "value": "Per Meeting (no. Entities)",
+    "formula": null,
+    "style": "49"
+  },
+  "A34": {
+    "value": "4. Individuals:",
+    "formula": null,
+    "style": "29"
+  },
+  "B35": {
+    "value": "BASE RATE for Tax return preparation",
+    "formula": null,
+    "style": "43"
+  },
+  "D35": {
+    "value": 420.0,
+    "formula": null,
+    "style": "9"
+  },
+  "F35": {
+    "value": 420.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G35": {
+    "value": "Per Tax Return",
+    "formula": null,
+    "style": "49"
+  },
+  "B36": {
+    "value": "CGT",
+    "formula": null,
+    "style": "43"
+  },
+  "D36": {
+    "value": 480.0,
+    "formula": null,
+    "style": "9"
+  },
+  "F36": {
+    "value": 480.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G36": {
+    "value": "Per CGT Event",
+    "formula": null,
+    "style": "49"
+  },
+  "B37": {
+    "value": "Business Schedule",
+    "formula": null,
+    "style": "43"
+  },
+  "D37": {
+    "value": 600.0,
+    "formula": null,
+    "style": "9"
+  },
+  "F37": {
+    "value": 3000.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G37": {
+    "value": "Per Business",
+    "formula": null,
+    "style": "49"
+  },
+  "B38": {
+    "value": "Depreciation Schedule",
+    "formula": null,
+    "style": "43"
+  },
+  "D38": {
+    "value": 240.0,
+    "formula": null,
+    "style": "9"
+  },
+  "F38": {
+    "value": 180.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G38": {
+    "value": "Per Schedule",
+    "formula": null,
+    "style": "49"
+  },
+  "B39": {
+    "value": "Investment income",
+    "formula": null,
+    "style": "43"
+  },
+  "F39": {
+    "value": 180.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G39": {
+    "value": "Per Schedule",
+    "formula": null,
+    "style": "49"
+  },
+  "B40": {
+    "value": "Distribution income",
+    "formula": null,
+    "style": "43"
+  },
+  "F40": {
+    "value": 180.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G40": {
+    "value": "Per Schedule",
+    "formula": null,
+    "style": "49"
+  },
+  "B41": {
+    "value": "Foreign income",
+    "formula": null,
+    "style": "43"
+  },
+  "F41": {
+    "value": 180.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G41": {
+    "value": "Per Schedule",
+    "formula": null,
+    "style": "49"
+  },
+  "B42": {
+    "value": "Rental Property Schedule",
+    "formula": null,
+    "style": "43"
+  },
+  "F42": {
+    "value": 360.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G42": {
+    "value": "Per Property",
+    "formula": null,
+    "style": "49"
+  },
+  "B43": {
+    "value": "Motor Vehicle Schedule",
+    "formula": null,
+    "style": "43"
+  },
+  "F43": {
+    "value": 180.0,
+    "formula": null,
+    "style": "9"
+  },
+  "G43": {
+    "value": "Per Vehicle",
+    "formula": null,
+    "style": "49"
+  }
+}
